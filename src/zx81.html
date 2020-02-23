@@ -1,0 +1,29 @@
+<HTML>
+<TITLE>ZX81</TITLE>
+<BODY>
+<script src="./zx81_emu.js"></script>
+<script>
+var emulatorUI;
+window.onload = function()
+  {
+  emulatorUI = new ZX81EmulatorUI('emulator_canvas','emulator_status')
+  }
+window.onunload = function()
+  {
+  emulatorUI.stop();
+  }
+</script>
+
+<SECTION class="emulator_wrapper">
+<canvas id="emulator_canvas">
+It appears your browser does not support the canvas element so no emulator is available.
+</canvas>
+</SECTION>
+
+<SECTION class="emulator_fps">
+<span id="emulator_status">&nbsp;</span>
+</SECTION>
+
+<A HREF="index.html">Home</A>
+</BODY>
+</HTML>
