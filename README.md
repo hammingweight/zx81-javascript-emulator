@@ -18,3 +18,10 @@ python -m SimpleHTTPServer
 
 and then open http://localhost:8000 and click on one of the links. Or simply go to http://localhost:8000/zx81.html?id=1 if you'd like to play chess against a rather weak opponent.
 
+## Using this
+You need to convert your `TZX` files to hex format. That's quite easy, e.g.
+```
+xxd -p VU-CALC.tzx | tr -d '\n' > 2.tzx.hex 
+```
+
+Then you need to ensure that the file is accessible when a query ID parameter is passed. Looking at the [src](./src) folder should give you a good idea of what to do. Of course, you might not want static content like this but the principles are much the same. The [zx81.html](./src/zx81.html) source should show you how to invoke the ZX81 emulator.
