@@ -21,13 +21,13 @@ python -m SimpleHTTPServer
 and then open http://localhost:8000 and click on one of the links. Or simply go to http://localhost:8000/zx81.html?id=1 if you'd like to play chess against a rather weak opponent.
 
 ## Using this
-You need to convert your `TZX` files to ASCII hex format and ensure that the resultant file suffix is `tzx.hex`. That's quite easy to do. For example, using `xxd`
+You need to convert your `TZX` files to ASCII hex format and ensure that the resultant file suffix is `tzx.hex`. You can use, e.g., `xxd` to do the conversion
 ```
 xxd -p VU-CALC.tzx | tr -d '\n' > 2.tzx.hex 
 ```
 
-In the example above `2` is the ID of the ZX81 program. The ID doesn't need to be numeric.
+In the example above `2` is the ID of the ZX81 program (the ID doesn't need to be numeric.)
 
-If you invoke a page running the [ZX81 JavaScript emulator](./src/zx81_emu.js) with an `id` query parameter (e.g. http://localhost:8000/zx81.html?id=2), the emulator will issue a `GET` request to the relative path `tapes/{id}.tzx.hex`. 
+If you invoke a page running the [ZX81 JavaScript emulator](./src/zx81_emu.js) with an `id` query parameter (e.g. http://localhost:8000/zx81.html?id=2), the emulator will issue a `GET` request to the relative URL `tapes/{id}.tzx.hex`. 
 
-Looking at the [src](./src) and [tapes](./src/tapes) folders should give you a good idea of what to do. Of course, you might not want static content like this; you might prefer to store the TZX `tapes` as binary blobs in an object store. No matter how you store a TZX archive, it must be returned as ASCII hex when a `GET` is issued to `/tapes/{id}.tzx.hex`.
+Looking at the [src](./src) and [tapes](./src/tapes) folders should give you a good idea of what you should do. Of course, you might not want to have static content in a `tapes` directory; you might prefer to store the TZX `tapes` as binary blobs in an object store. No matter how you store a TZX archive, it must be returned as ASCII hex when a `GET` is issued to `/tapes/{id}.tzx.hex`.
