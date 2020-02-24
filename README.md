@@ -30,4 +30,4 @@ In the example above `2` is the ID of the ZX81 program (the ID doesn't need to b
 
 If you invoke a page running the [ZX81 JavaScript emulator](./src/zx81_emu.js) with an `id` query parameter (e.g. http://localhost:8000/zx81.html?id=2), the emulator will issue a `GET` request to the relative URL `tapes/{id}.tzx.hex`. 
 
-Looking at the [src](./src) and [tapes](./src/tapes) folders should give you a good idea of what you should do. Of course, you might not want to have static content in a `tapes` directory; you might prefer to store the TZX `tapes` as binary blobs in an object store. No matter how you store a TZX archive, it must be returned as ASCII hex when a `GET` is issued to `/tapes/{id}.tzx.hex`.
+Looking at the [src](./src) and [tapes](./src/tapes) folders should give you a good idea of what you should do. Of course, you might not want to have static content in a `tapes` directory; you might prefer to store the TZX `tapes` as binary blobs in an object store. No matter how or where you store a TZX archive, it must be returned as ASCII hex when a `GET` is issued to `/tapes/{id}.tzx.hex`.
