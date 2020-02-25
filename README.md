@@ -9,7 +9,7 @@ The source and executables for `JtyOne` can be found in the [legacy directory](.
 ![The ZX81](zx81.jpg)
 
 ## Why this fork?
-Holdsworth's code is quite tightly coupled to the layout of his (excellent) [website](http://www.zx81stuff.org.uk/). For people who want to run a single program, the library is daunting to use. This fork is intended to make it easier to run single ZX81 programs (which must be in TZX format).
+Holdsworth's code is quite tightly coupled to the layout of his (excellent) [website](http://www.zx81stuff.org.uk/). For people who want to run a single program, the library is daunting to use. This fork is intended to make it easier to run single ZX81 programs (which must be in TZX format.)
 
 ## "Show me some running code"
 To see the code in action
