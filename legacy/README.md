@@ -9,7 +9,7 @@ The EightyOne code is hosted on [SourceForge](https://sourceforge.net/projects/e
 ## Running the JtyOne Emulator
 To run the emulator pass the name of a `TZX` file on the command line. For example,
 ```
-java -jar jtyone.jar mygames/alien.tzxx
+java -jar jtyone.jar tapes/zx81/alien.tzxx
 ```
 
 ## Running the EightyOne Emulator
