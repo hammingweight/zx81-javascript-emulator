@@ -12,13 +12,16 @@ The source and executables for `JtyOne` can be found in the [legacy directory](.
 Holdsworth's code is quite tightly coupled to the layout of his (excellent) [website](http://www.zx81stuff.org.uk/). For people who want to run a single program, the library is daunting to use. This fork is intended to make it easier to run single ZX81 programs (which must be in TZX format.)
 
 ## "Show me some running code"
-To see the code in action
+To see the code in action, clone it out and run it
 ```
-cd src
+git clone https://github.com/hammingweight/zx81-javascript-emulator.git
+cd zx81-javascript-emulator/src
 python -m SimpleHTTPServer
 ```
 
-and then open http://localhost:8000 and click on one of the links. Or simply go to http://localhost:8000/zx81.html?id=1 if you'd like to play chess against a rather weak opponent.
+and then open http://localhost:8000 and click on one of the links.
+
+If cloning the repository is to much work, visit [hammingweight.github.io](https://hammingweight.github.io).
 
 ## Using this
 You need to convert your `TZX` files to ASCII hex format and ensure that the resultant file suffix is `tzx.hex`. You can use, e.g., `xxd` to do the conversion
